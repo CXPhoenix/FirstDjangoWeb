@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+   {% for post in postList %}
+   <div>
+       <h1><a href="{% url 'detail' pk=post.pk %}">{{post.title}}</a></h1>
+       <h2>{{post.created_at|date:"Y / m / d"}}</h2>
+       <p>{{post.content}}</p>
+       <p>location: {{post.location}}</p>
+   </div>
+   <hr />
+   {% endfor %}
+    <script src=""></script>
+</body>
+</html>
